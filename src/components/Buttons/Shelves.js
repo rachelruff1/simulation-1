@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
+import {Link } from 'react-router-dom';
 import ('./Shelves.css');
 // import axios from "axios";
 
-export default class Shelves extends Component {
-    constructor(props){
-        super(props)
-    }
 
+const Shelves =props => (
 
-
-render(){
-    return(
         <div className = 'shelves'>
-        <button onClick={this.getShelf} >{`Shelf ${this.props.title}`}</button>
+        <Link to={`/bins/${props.title}`}><button>{`Shelf ${props.title}`}</button></Link>
         </div>
     )
-}
-}
+
+    export default Shelves;

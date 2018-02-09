@@ -4,15 +4,18 @@ const {json} = require ('body-parser');
 const massive = require ('massive');
 const ctr = require ("./controller");
 const app = express();
+require("dotenv").config();
+
 
 app.use(cors());
 app.use(json());
 
 massive(process.env.CONNECTION_STRING)
-    .then(dbInstance => {
-        app.set('db', dbInstance)
-        console.log(process.env)
-    });
+    .then(db => {
+        app.set('db', db)
+        
+    })
+    .catch(console.log());
 
 //shelves
 app.get('api/shelf/:id', ctr.getShelf)

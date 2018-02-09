@@ -1,5 +1,5 @@
 .shelves{
-    margin-left: 22%;
+   margin-left: 400px;
 }
 .shelves button {
     width: 500px;
@@ -13,5 +13,6 @@
     font-size: 180%;
     cursor: pointer;
     align-items: center;
+    padding-left: 80px;
 
 }

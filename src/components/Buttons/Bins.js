@@ -1,29 +1,35 @@
 import React from 'react';
 import '/Bins.css';
+import axios from 'axios';
 
 export default class Bin extends Component {
     constructor(props){
         super(props)
         this.state = {
-            inventory : {}
+            title: this.props.match.params.id,
+            bins : []
         }
     
-
-this.actionButton = this.actionButton.bind(this);
-
-
 }
-actionButton(inventory, props){
+componentDidMount(){
+    axios
+        .get(`/api/shelf/${this.state.title}`)
+        .then(response =>
+        response.data)
+        .catch(console.log)
+}
     
     
 }
 
-render(){
+render(
+    const binsOption = this
+){
+const binsOption = this.state.bins.map
     return(
-        <button>{actionButton}</button>
+        <div className='bins-container'>
+        {binsOption}
+        </div>
     )
 }
 
-//
-//if !bin:id <p>'+ Add inventory to bin'<p> 
-//else <p>{`Bin ${props.title}}

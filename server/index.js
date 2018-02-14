@@ -18,7 +18,7 @@ massive(process.env.CONNECTION_STRING)
 //shelves
 app.get("api/shelf/:id", ctr.getShelf);
 //bins
-app.get("/api/shelf/:id", ctr.getBin);
+app.get("/api/bins/:id", ctr.getBin);
 app.put("/api/bin:id", ctr.updateBin);
 app.delete("/api/bin/:id", ctr.deleteObj);
 app.post("api/bin/:id", ctr.createObj);

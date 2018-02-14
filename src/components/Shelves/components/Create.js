@@ -7,4 +7,12 @@ export default class Create extends Component {
             
         }
     }
+
+render(){
+    return(
+        <div className = 'content-container'>
+<img/>
+        </div>
+    )
+}
 }
